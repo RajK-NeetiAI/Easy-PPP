@@ -11,7 +11,7 @@ export default async function DashboardPage() {
     if (userId === null) {
         return redirectToSignIn()
     }
-    const products = await getProducts(userId, { limit: 6 })
+    const products = await getProducts(userId)
     if (products.length === 0) {
         return (
             <NoProducts></NoProducts>
